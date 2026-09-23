@@ -1,0 +1,512 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Times New Roman", Times, serif;
+    color: #35313d;
+    background-color: #f8f6fc;
+    line-height: 1.6;
+}
+a {
+    color: #8b78b5;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+a:hover {
+    color: #6f5b9d;
+    text-decoration: none;
+}
+
+/* ===== Header & Navbar ===== */
+header {
+    background: linear-gradient(135deg, #9b8ac4, #8170aa);
+    color: #fff;
+    padding: 1.1rem 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 12px rgba(92, 72, 126, 0.18);
+}
+
+header h1 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav a {
+    color: #fff;
+    font-weight: 500;
+    padding: 0.35rem 0;
+}
+
+header nav a:hover {
+    color: #f0ecf8;
+}
+
+/* ===== Main Layout ===== */
+main {
+    max-width: 1050px;
+    margin: 2.2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 1.6rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 16px rgba(86, 70, 111, 0.08);
+    border: 1px solid #eeeaf5;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #806eaa;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+/* ===== Kartu Statistik ===== */
+main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.1rem;
+}
+
+main section:nth-of-type(2) article {
+    background: linear-gradient(145deg, #f4f0fa, #ebe5f5);
+    border-radius: 12px;
+    padding: 1.4rem;
+    text-align: center;
+    border: 1px solid #e5def0;
+}
+
+main section:nth-of-type(2) article h3 {
+    font-size: 0.9rem;
+    color: #686074;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+main section:nth-of-type(2) article p {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #806eaa;
+}
+
+/* ===== Tabel ===== */
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 0.75rem 0.8rem;
+    border-bottom: 1px solid #ebe8f0;
+}
+
+thead {
+    background-color: #8f7ab8;
+    color: #fff;
+}
+
+th {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #faf9fc;
+}
+
+tbody tr:hover {
+    background-color: #f2eef8;
+}
+
+/* ===== Tombol Aksi Tabel ===== */
+td button,
+td a.btn-edit {
+    padding: 0.4rem 0.75rem;
+    margin-right: 0.3rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-family: inherit;
+    transition: 0.2s ease;
+}
+
+/* Tombol Edit */
+td a.btn-edit {
+    display: inline-block;
+    background-color: #d3a24c;
+    color: #fff;
+    text-decoration: none;
+}
+
+td a.btn-edit:hover {
+    background-color: #bd8d3c;
+    color: #fff;
+}
+
+/* Form Hapus */
+td form.form-hapus {
+    display: inline;
+}
+
+/* Tombol Hapus */
+td form.form-hapus button.btn-hapus {
+    background-color: #d66a67;
+    color: #fff;
+}
+
+td form.form-hapus button.btn-hapus:hover {
+    background-color: #bd5653;
+}
+
+/* ===== Pagination ===== */
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.pagination a {
+    padding: 0.45rem 0.8rem;
+    border: 1px solid #d8d1e2;
+    border-radius: 6px;
+    color: #806eaa;
+    background-color: #fff;
+    transition: 0.2s ease;
+}
+
+.pagination a:hover {
+    background-color: #eee9f6;
+    color: #6f5b9d;
+}
+
+.pagination a.active {
+    background-color: #8f7ab8;
+    color: #fff;
+    border-color: #8f7ab8;
+}
+
+/* ===== Kolom Pencarian ===== */
+.search-box {
+    margin-bottom: 1.2rem;
+}
+
+.search-box form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.search-box label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #494351;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 330px;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #d8d1e2;
+    border-radius: 7px;
+    font-family: inherit;
+    background-color: #fff;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #9b8ac4;
+    box-shadow: 0 0 0 3px rgba(155, 138, 196, 0.12);
+}
+
+.search-box button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 7px;
+    background-color: #8f7ab8;
+    color: #fff;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.search-box button:hover {
+    background-color: #7561a0;
+}
+
+/* ===== Form ===== */
+form p {
+    margin-bottom: 1.1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #494351;
+}
+
+form input,
+form select {
+    width: 100%;
+    max-width: 420px;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid #d8d1e2;
+    border-radius: 7px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #9b8ac4;
+    box-shadow: 0 0 0 3px rgba(155, 138, 196, 0.15);
+}
+
+form button[type="submit"] {
+    background-color: #8f7ab8;
+    color: #fff;
+    border: none;
+    padding: 0.65rem 1.6rem;
+    border-radius: 7px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #7561a0;
+    transform: translateY(-1px);
+}
+
+/* ===== Tombol Tambah & Kembali ===== */
+.action-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.btn-tambah {
+    display: inline-block;
+    background-color: #8f7ab8;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.btn-tambah:hover {
+    background-color: #7561a0;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.btn-kembali {
+    display: inline-block;
+    background-color: #e8e3ef;
+    color: #554d60;
+    padding: 0.6rem 1rem;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.btn-kembali:hover {
+    background-color: #dcd5e6;
+    color: #443d4d;
+}
+
+/* ===== Informasi Data ===== */
+.data-info {
+    margin-bottom: 1rem;
+    color: #6d6675;
+    font-size: 0.9rem;
+}
+
+.empty-data {
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #817b8c;
+    font-style: italic;
+}
+
+/* ===== Flash Message ===== */
+.flash {
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+}
+
+.flash-success {
+    background-color: #e2f3e7;
+    color: #28613b;
+    border-left: 4px solid #5ca875;
+}
+
+.flash-error {
+    background-color: #f9e3e3;
+    color: #7b3030;
+    border-left: 4px solid #d66a67;
+}
+
+.flash-info {
+    background-color: #eee9f6;
+    color: #5b4f70;
+    border-left: 4px solid #9b8ac4;
+}
+
+/* ===== Pesan Error Validasi ===== */
+.error {
+    display: block;
+    color: #c94f4c;
+    font-size: 0.83rem;
+    margin-top: 0.3rem;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1.4rem;
+    color: #817b8c;
+    font-size: 0.85rem;
+}
+
+/* ===== Hamburger Menu ===== */
+.nav-toggle-label {
+    display: none;
+    font-size: 1.6rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+    main section:nth-of-type(2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header nav ul {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        position: relative;
+        padding: 1rem 1.2rem;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav {
+        width: 100%;
+        order: 3;
+        margin-top: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+    }
+
+    header nav.nav-open {
+        max-height: 250px;
+        opacity: 1;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    main {
+        margin-top: 1.2rem;
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: 1.2rem;
+        border-radius: 12px;
+    }
+
+    main section:nth-of-type(2) {
+        grid-template-columns: 1fr;
+    }
+
+    form input,
+    form select {
+        max-width: 100%;
+    }
+
+    .action-area {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .btn-tambah,
+    .btn-kembali {
+        text-align: center;
+    }
+
+    .search-box form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .search-box input {
+        max-width: 100%;
+    }
+
+    .search-box button {
+        width: fit-content;
+    }
+
+    td a.btn-edit,
+    td form.form-hapus button {
+        margin-bottom: 0.3rem;
+    }
+}
